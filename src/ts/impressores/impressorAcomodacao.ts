@@ -3,9 +3,11 @@ import Acomodacao from "../modelos/acomodacao";
 
 export default class ImpressorAcomodacao implements Impressor {
     private acomodacao: Acomodacao
+
     constructor(acomodacao: Acomodacao) {
         this.acomodacao = acomodacao
     }
+
     imprimir(): string {
         let descricao = `Nomenclatura: ${this.acomodacao.NomeAcomadacao.toString()}\n`
             + `-- Quantidade de leitos para solteiros: ${this.acomodacao.CamaSolteiro}\n`

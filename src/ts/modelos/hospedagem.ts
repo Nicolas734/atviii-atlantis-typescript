@@ -6,9 +6,9 @@ export default class Hospedagem {
     private titular!:Cliente
     private dataCadastro:Date
 
-    constructor(titular:Cliente, acomodacao:Acomodacao[]){
+    constructor(titular:Cliente, acomodacoes:Acomodacao[]){
         this.titular = titular
-        this.acomodacoes = acomodacao
+        this.acomodacoes = acomodacoes
         this.dataCadastro = new Date()
     }
 

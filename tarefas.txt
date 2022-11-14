@@ -1,10 +1,12 @@
 - Implementar todas as classes diretoras – responsáveis por criar cada tipo de acomodação.  *Finalizado
 - Implementar as estruturas de dados e a lógica necessárias para controlar a hospedagem, ou seja, poder registar hospedes e vincular estes hospedes a algum tipo de acomodação.
 
+
+
 Hospedagem
 
-- armazenar as hospedagens
-- cadastrar a hospedagem de um cliente
+- armazenar as hospedagens                                      *Finalizado
+- cadastrar a hospedagem de um cliente                          *Finalizado
 - buscar pela hospedagem de um cliente
 - atualizar a hospedagem de um cliente
 - apagar a hospedagem de um cliente
