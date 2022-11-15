@@ -9,7 +9,7 @@ import BuscarTitular from "../buscas/buscarTitular";
 
 export default class cadastroHospedagem extends Processo{
     private titular!:Cliente
-    private acomodacoes:Acomodacao[] = []
+    private acomodacao!:Acomodacao
     private hospedagens!:Hospedagem[]
     private busca:any
 
@@ -27,24 +27,14 @@ export default class cadastroHospedagem extends Processo{
         if(this.titular === undefined){
             console.log("Titular não encontrado...");
         }else{
-
-            while(this.execucao){
-                this.busca = new BuscarAcomodacao()
-                let acomodacao = this.busca.buscar()
-
-                if(acomodacao === undefined){
-                    console.log("Acomodação não encontrada...");
-                }else{
-                    this.acomodacoes.push(acomodacao)
-                    let opcao = this.entrada.receberTexto("Gostaria de escolher mais uma acomodação ? [SIM/NAO] ")
-
-                    if(opcao.toUpperCase() != "SIM"){
-                        console.log("\nHospedagem realizada com sucesso...\n");
-                        this.execucao = false
-                        this.hospedagens.push(new Hospedagem(this.titular, this.acomodacoes))
-
-                    }
-                }
+            this.busca = new BuscarAcomodacao()
+            this.acomodacao = this.busca.buscar()
+            if(this.acomodacao === undefined){
+                console.log("Acomodação não encontrada...");
+            }else{
+                console.log("\nHospedagem realizada com sucesso...\n");
+                this.execucao = false
+                this.hospedagens.push(new Hospedagem(this.titular, this.acomodacao))
             }
         }
     }

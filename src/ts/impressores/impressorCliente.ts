@@ -10,7 +10,6 @@ export default class ImpressorCliente implements Impressor {
 
     constructor(cliente: Cliente) {
         this.cliente = cliente
-
     }
 
     imprimir(): string {
