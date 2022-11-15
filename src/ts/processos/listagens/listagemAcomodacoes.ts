@@ -15,6 +15,7 @@ export default class ListagemAcomodacoes extends Processo {
     }
 
     processar(): void {
+        console.log(this.acomodacoes);
         console.clear()
         console.log('\nIniciando a listagem das acomodações ofertadas...')
         console.log(`-------------------------------------------------`)
